@@ -10,7 +10,7 @@ export default function PublicLayout({ children }: PropsWithChildren) {
         <div className="public-logo">ganin</div>
 
         <nav className="public-nav">
-          <a href="#features">Features</a>
+          <Link href="/solutions">Our Solutions</Link>
           <a href="#workflow">Workflow</a>
           <a href="#about">About</a>
 
@@ -30,7 +30,7 @@ export default function PublicLayout({ children }: PropsWithChildren) {
 
         <div className="public-footer-links">
           <Link href={home()}>Welcome</Link>
-          <a href="#features">Features</a>
+          <Link href="/solutions">Our Solutions</Link>
           <a href="#about">About</a>
         </div>
       </footer>

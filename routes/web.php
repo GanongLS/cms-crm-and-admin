@@ -14,6 +14,10 @@ Route::get('/landing', function () {
   return Inertia::render('landing');
 })->name('landing');
 
+Route::get('/solutions', function () {
+  return Inertia::render('solutions');
+})->name('solutions');
+
 Route::get('/start', function () {
   return Inertia::render('start');
 })->name('start');
