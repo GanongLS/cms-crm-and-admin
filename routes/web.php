@@ -12,9 +12,9 @@ Route::get('/', function () {
   ]);
 })->name('home');
 
-Route::get('/landing', function () {
-  return Inertia::render('landing');
-})->name('landing');
+Route::get('/learn-more', function () {
+  return Inertia::render('learn-more');
+})->name('learn-more');
 
 Route::get('/solutions', function () {
   return Inertia::render('solutions');
@@ -23,6 +23,27 @@ Route::get('/solutions', function () {
 Route::get('/management', function () {
   return Inertia::render('management');
 })->name('management');
+
+Route::get('/homestead', function () {
+  return Inertia::render('homestead');
+})->name('homestead');
+
+Route::get('/team-building', function () {
+  return Inertia::render('team-building');
+})->name('team-building');
+
+Route::get('/science-tech', function () {
+  return Inertia::render('science-tech');
+})->name('science-tech');
+
+Route::get('/art-gallery', function () {
+  return Inertia::render('art-gallery');
+})->name('art-gallery');
+
+Route::get('/about', function () {
+  return Inertia::render('about');
+})->name('about');
+
 
 Route::get('/start', function () {
   return Inertia::render('start');

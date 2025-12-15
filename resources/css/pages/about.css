@@ -1,0 +1,79 @@
+@layer components {
+  /* HERO */
+  .about-hero {
+    @apply flex min-h-[60vh] items-center justify-center px-10 text-center;
+  }
+
+  .about-hero-content {
+    @apply flex max-w-3xl flex-col gap-4;
+  }
+
+  .about-hero-content h1 {
+    @apply text-5xl font-semibold tracking-tight;
+  }
+
+  .about-hero-content p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* SECTIONS */
+  .about-section {
+    @apply px-10 py-24 text-center;
+  }
+
+  .about-section.alt {
+    @apply bg-muted;
+  }
+
+  .about-section h2 {
+    @apply mb-6 text-4xl font-semibold tracking-tight;
+  }
+
+  /* STORY */
+  .about-story {
+    @apply mx-auto flex max-w-3xl flex-col gap-4;
+  }
+
+  .about-story p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* VALUES */
+  .about-values-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .about-value {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .about-value h3 {
+    @apply mb-2 text-lg font-medium;
+  }
+
+  .about-value p {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* DOMAINS */
+  .about-domain-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-2 gap-8;
+  }
+
+  .about-domain {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .about-domain h4 {
+    @apply mb-2 text-base font-medium;
+  }
+
+  .about-domain p {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* CLOSING */
+  .about-closing {
+    @apply mx-auto max-w-3xl text-lg text-muted-foreground;
+  }
+}

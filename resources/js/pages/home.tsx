@@ -18,10 +18,10 @@ function Home() {
 
           <div className="home-actions">
             <Link href="/solutions" className="btn-primary">
-              Explore Solutions
+              Explore Our Solutions
             </Link>
 
-            <Link href="/landing" className="btn-secondary">
+            <Link href="/learn-more" className="btn-secondary">
               Learn More
             </Link>
           </div>

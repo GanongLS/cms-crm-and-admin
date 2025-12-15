@@ -1,0 +1,74 @@
+@layer components {
+  /* HERO */
+  .homestead-hero {
+    @apply flex min-h-[60vh] items-center justify-center px-10 text-center;
+  }
+
+  .homestead-hero-content {
+    @apply flex max-w-3xl flex-col gap-4;
+  }
+
+  .homestead-hero-content h1 {
+    @apply text-5xl font-semibold tracking-tight;
+  }
+
+  .homestead-hero-content p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* SECTIONS */
+  .homestead-section {
+    @apply px-10 py-24 text-center;
+  }
+
+  .homestead-section.alt {
+    @apply bg-muted;
+  }
+
+  .homestead-section h2 {
+    @apply mb-6 text-4xl font-semibold tracking-tight;
+  }
+
+  /* OVERVIEW */
+  .homestead-overview {
+    @apply mx-auto flex max-w-3xl flex-col gap-4;
+  }
+
+  .homestead-overview p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* DOMAINS */
+  .homestead-domain-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .homestead-domain-card {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .homestead-domain-card h3 {
+    @apply mb-2 text-lg font-medium;
+  }
+
+  .homestead-domain-card p {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* APPROACH */
+  .homestead-approach-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .homestead-approach {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .homestead-approach h4 {
+    @apply mb-2 text-base font-medium;
+  }
+
+  .homestead-approach p {
+    @apply text-sm text-muted-foreground;
+  }
+}

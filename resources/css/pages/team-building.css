@@ -1,0 +1,74 @@
+@layer components {
+  /* HERO */
+  .team-hero {
+    @apply flex min-h-[60vh] items-center justify-center px-10 text-center;
+  }
+
+  .team-hero-content {
+    @apply flex max-w-3xl flex-col gap-4;
+  }
+
+  .team-hero-content h1 {
+    @apply text-5xl font-semibold tracking-tight;
+  }
+
+  .team-hero-content p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* SECTIONS */
+  .team-section {
+    @apply px-10 py-24 text-center;
+  }
+
+  .team-section.alt {
+    @apply bg-muted;
+  }
+
+  .team-section h2 {
+    @apply mb-6 text-4xl font-semibold tracking-tight;
+  }
+
+  /* OVERVIEW */
+  .team-overview {
+    @apply mx-auto flex max-w-3xl flex-col gap-4;
+  }
+
+  .team-overview p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* CAPABILITIES */
+  .team-capability-grid {
+    @apply mx-auto grid max-w-6xl grid-cols-3 gap-8;
+  }
+
+  .team-capability-card {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .team-capability-card h3 {
+    @apply mb-2 text-lg font-medium;
+  }
+
+  .team-capability-card p {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* PHILOSOPHY */
+  .team-philosophy-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .team-philosophy {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .team-philosophy h4 {
+    @apply mb-2 text-base font-medium;
+  }
+
+  .team-philosophy p {
+    @apply text-sm text-muted-foreground;
+  }
+}

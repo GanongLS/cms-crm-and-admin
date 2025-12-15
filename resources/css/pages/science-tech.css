@@ -1,0 +1,74 @@
+@layer components {
+  /* HERO */
+  .science-hero {
+    @apply flex min-h-[60vh] items-center justify-center px-10 text-center;
+  }
+
+  .science-hero-content {
+    @apply flex max-w-3xl flex-col gap-4;
+  }
+
+  .science-hero-content h1 {
+    @apply text-5xl font-semibold tracking-tight;
+  }
+
+  .science-hero-content p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* SECTIONS */
+  .science-section {
+    @apply px-10 py-24 text-center;
+  }
+
+  .science-section.alt {
+    @apply bg-muted;
+  }
+
+  .science-section h2 {
+    @apply mb-6 text-4xl font-semibold tracking-tight;
+  }
+
+  /* OVERVIEW */
+  .science-overview {
+    @apply mx-auto flex max-w-3xl flex-col gap-4;
+  }
+
+  .science-overview p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* DOMAINS */
+  .science-domain-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .science-domain-card {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .science-domain-card h3 {
+    @apply mb-2 text-lg font-medium;
+  }
+
+  .science-domain-card p {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* PRINCIPLES */
+  .science-principle-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .science-principle {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .science-principle h4 {
+    @apply mb-2 text-base font-medium;
+  }
+
+  .science-principle p {
+    @apply text-sm text-muted-foreground;
+  }
+}

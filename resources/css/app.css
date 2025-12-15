@@ -67,8 +67,8 @@
   --card-foreground: oklch(0.145 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(61.892% 0.17189 258.626);
-  --primary-foreground: oklch(18.566% 0.11418 272.013);
+  --primary: oklch(88.02% 0.13208 163.946);
+  --primary-foreground: oklch(28.534% 0.16364 265.132);
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -103,8 +103,8 @@
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
+  --primary: oklch(34.416% 0.14241 261.611);
+  --primary-foreground: oklch(34.611% 0.0886 152.188);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
@@ -143,8 +143,14 @@
 
 @import './pages/home.css';
 @import './pages/start.css';
-@import './pages/landing.css';
+@import './pages/learn-more.css';
 @import './pages/solutions.css';
 @import './pages/management.css';
+@import './pages/homestead.css';
+@import './pages/team-building.css';
+@import './pages/science-tech.css';
+@import './pages/art-gallery.css';
+@import './pages/about.css';
+
 
 @import './layouts/public-layout.css';

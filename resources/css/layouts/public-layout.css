@@ -27,9 +27,8 @@
 
   /* CTA / PRIMARY NAV BUTTON */
   .public-nav-cta {
-    @apply inline-block rounded-sm border border-[#03718d44] px-5 py-1.5 text-sm font-medium leading-normal transition hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b] bg-primary text-primary-foreground;
+    @apply inline-block rounded-sm border border-[#03718d44] bg-primary px-5 py-1.5 text-sm leading-normal font-medium text-primary-foreground transition hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b];
   }
-
 
   /* CONTENT OFFSET (karena header fixed) */
   .public-content {
@@ -43,5 +42,11 @@
 
   .public-footer-links {
     @apply flex gap-6 text-sm text-muted-foreground;
+  }
+
+  .nav-divider {
+    border-left: 3px solid black; /* The vertical line */
+    height: 100%; /* Makes the line fill the container's height */
+    margin: 0 2px; /* Adds some space around the line */
   }
 }

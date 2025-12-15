@@ -1,82 +1,82 @@
 @layer components {
   /* HERO */
-  .landing-hero {
+  .learn-more-hero {
     @apply flex min-h-screen items-center justify-center px-10 text-center;
   }
 
-  .landing-hero-content {
+  .learn-more-hero-content {
     @apply flex max-w-3xl flex-col gap-6;
   }
 
-  .landing-hero-content h1 {
+  .learn-more-hero-content h1 {
     @apply text-5xl leading-tight font-semibold tracking-tight;
   }
 
-  .landing-hero-content p {
+  .learn-more-hero-content p {
     @apply text-lg text-muted-foreground;
   }
 
-  .landing-hero-actions {
+  .learn-more-hero-actions {
     @apply mt-6 flex items-center justify-center gap-4;
   }
 
-  .landing-btn-primary {
+  .learn-more-btn-primary {
     @apply rounded-md bg-primary px-6 py-2 text-sm font-medium text-primary-foreground;
   }
 
   /* SECTIONS */
-  .landing-section {
+  .learn-more-section {
     @apply flex min-h-screen flex-col items-center justify-center gap-8 px-10 text-center;
   }
 
-  .landing-section--alt {
+  .learn-more-section--alt {
     @apply bg-muted;
   }
 
-  .landing-section h2 {
+  .learn-more-section h2 {
     @apply text-4xl font-semibold tracking-tight;
   }
 
   /* FEATURES */
-  .landing-feature-grid {
+  .learn-more-feature-grid {
     @apply mt-10 grid max-w-5xl grid-cols-3 gap-8;
   }
 
-  .landing-feature-card {
+  .learn-more-feature-card {
     @apply rounded-lg border border-border p-6 text-left;
   }
 
-  .landing-feature-card h3 {
+  .learn-more-feature-card h3 {
     @apply mb-2 text-lg font-medium;
   }
 
-  .landing-feature-card p {
+  .learn-more-feature-card p {
     @apply text-sm text-muted-foreground;
   }
 
   /* WORKFLOW */
-  .landing-workflow {
+  .learn-more-workflow {
     @apply mt-10 flex gap-12;
   }
 
-  .landing-workflow-step {
+  .learn-more-workflow-step {
     @apply max-w-xs text-left;
   }
 
-  .landing-workflow-step span {
+  .learn-more-workflow-step span {
     @apply text-sm text-muted-foreground;
   }
 
-  .landing-workflow-step h4 {
+  .learn-more-workflow-step h4 {
     @apply mt-2 text-lg font-medium;
   }
 
-  .landing-workflow-step p {
+  .learn-more-workflow-step p {
     @apply text-sm text-muted-foreground;
   }
 
   /* ABOUT */
-  .landing-about-text {
+  .learn-more-about-text {
     @apply max-w-2xl text-lg text-muted-foreground;
   }
 }

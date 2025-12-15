@@ -1,0 +1,66 @@
+@layer components {
+  /* HERO */
+  .art-hero {
+    @apply flex min-h-[60vh] items-center justify-center px-10 text-center;
+  }
+
+  .art-hero-content {
+    @apply flex max-w-3xl flex-col gap-4;
+  }
+
+  .art-hero-content h1 {
+    @apply text-5xl font-semibold tracking-tight;
+  }
+
+  .art-hero-content p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* SECTIONS */
+  .art-section {
+    @apply px-10 py-24 text-center;
+  }
+
+  .art-section.alt {
+    @apply bg-muted;
+  }
+
+  .art-section h2 {
+    @apply mb-6 text-4xl font-semibold tracking-tight;
+  }
+
+  /* OVERVIEW */
+  .art-overview {
+    @apply mx-auto flex max-w-3xl flex-col gap-4;
+  }
+
+  .art-overview p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* GALLERY */
+  .art-grid {
+    @apply mx-auto grid max-w-6xl grid-cols-3 gap-10;
+  }
+
+  .art-card {
+    @apply flex flex-col gap-3 text-left;
+  }
+
+  .art-thumbnail {
+    @apply aspect-[4/3] w-full rounded-lg border border-border bg-muted;
+  }
+
+  .art-card h3 {
+    @apply text-lg font-medium;
+  }
+
+  .art-card p {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* STATEMENT */
+  .art-statement {
+    @apply mx-auto max-w-3xl text-lg text-muted-foreground;
+  }
+}
