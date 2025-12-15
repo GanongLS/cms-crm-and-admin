@@ -11,7 +11,7 @@ function Solutions() {
         <div className="solutions-hero-content">
           <h1>Our Solutions</h1>
           <p>
-            An ecosystem of solutions built by Ganin Enterprise to support management, sustainability, people, and
+            An ecosystem of solutions built by Ganin Enterprise to support harmony, sustainability, people, art, science, tech and
             innovation.
           </p>
         </div>

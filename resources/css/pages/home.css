@@ -1,0 +1,47 @@
+@layer components {
+  /* HERO */
+  .home-hero {
+    @apply flex min-h-[80vh] items-center justify-center px-10 text-center;
+  }
+
+  .home-hero-content {
+    @apply flex max-w-3xl flex-col gap-6;
+  }
+
+  .home-hero-content h1 {
+    @apply text-5xl font-semibold tracking-tight;
+  }
+
+  .home-hero-content p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  .home-actions {
+    @apply mt-6 flex justify-center gap-4;
+  }
+
+  /* SECTION */
+  .home-section {
+    @apply px-10 py-24 text-center;
+  }
+
+  .home-section h2 {
+    @apply mb-10 text-4xl font-semibold tracking-tight;
+  }
+
+  .home-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .home-card {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .home-card h3 {
+    @apply mb-2 text-lg font-medium;
+  }
+
+  .home-card p {
+    @apply text-sm text-muted-foreground;
+  }
+}

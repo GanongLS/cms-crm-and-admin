@@ -5,10 +5,7 @@
 
   /* HEADER */
   .public-header {
-    @apply fixed top-0 right-0 left-0 z-50
-           flex items-center justify-between
-           px-10 py-6
-           bg-background/80 backdrop-blur;
+    @apply fixed top-0 right-0 left-0 z-50 flex items-center justify-between bg-background/80 px-10 py-6 backdrop-blur;
   }
 
   .public-logo {
@@ -23,12 +20,16 @@
     @apply text-muted-foreground transition hover:text-foreground;
   }
 
-  .public-nav-cta {
-    @apply rounded-md bg-primary
-           px-4 py-1.5
-           text-sm font-medium
-           text-primary-foreground;
+  /* BASE NAV LINK */
+  .public-nav-link {
+    @apply inline-block rounded-sm border border-transparent px-5 py-1.5 text-sm leading-normal text-[#1b1b18] transition hover:border-[#19140035] dark:text-[#EDEDEC] dark:hover:border-[#3E3E3A];
   }
+
+  /* CTA / PRIMARY NAV BUTTON */
+  .public-nav-cta {
+    @apply inline-block rounded-sm border border-[#03718d44] px-5 py-1.5 text-sm font-medium leading-normal transition hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b] bg-primary text-primary-foreground;
+  }
+
 
   /* CONTENT OFFSET (karena header fixed) */
   .public-content {
@@ -37,10 +38,7 @@
 
   /* FOOTER */
   .public-footer {
-    @apply mt-auto
-           flex items-center justify-between
-           border-t border-border
-           px-10 py-8;
+    @apply mt-auto flex items-center justify-between border-t border-border px-10 py-8;
   }
 
   .public-footer-links {

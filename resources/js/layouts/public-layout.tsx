@@ -1,5 +1,5 @@
 // resources/js/layouts/PublicLayout.tsx
-import { home } from '@/routes';
+import { home, login, register } from '@/routes';
 import { Link } from '@inertiajs/react';
 import { PropsWithChildren } from 'react';
 
@@ -7,16 +7,23 @@ export default function PublicLayout({ children }: PropsWithChildren) {
   return (
     <div className="public-root">
       <header className="public-header">
-        <div className="public-logo">ganin</div>
+        <Link href={home()} className="public-logo">
+          Ganin
+        </Link>
 
         <nav className="public-nav">
           <Link href="/solutions">Our Solutions</Link>
-          <a href="#workflow">Workflow</a>
-          <a href="#about">About</a>
+          <Link href="/management">Management</Link>
 
-          <Link href={home()} className="public-nav-cta">
-            Welcome
-          </Link>
+          <>
+            <Link href={login()} className="public-nav-link">
+              Log in
+            </Link>
+
+            <Link href={register()} className="public-nav-cta">
+              Register
+            </Link>
+          </>
         </nav>
       </header>
 
@@ -31,7 +38,7 @@ export default function PublicLayout({ children }: PropsWithChildren) {
         <div className="public-footer-links">
           <Link href={home()}>Welcome</Link>
           <Link href="/solutions">Our Solutions</Link>
-          <a href="#about">About</a>
+          <a href="/laravel">Laravel</a>
         </div>
       </footer>
     </div>
