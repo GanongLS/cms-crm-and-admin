@@ -1,0 +1,41 @@
+@layer components {
+  .landing {
+    @apply flex flex-col;
+  }
+
+  .landing-hero {
+    @apply flex min-h-screen flex-col items-center justify-center gap-6 px-6 text-center;
+  }
+
+  .landing-title {
+    @apply text-4xl font-semibold tracking-tight md:text-6xl;
+  }
+
+  .landing-subtitle {
+    @apply max-w-xl text-lg text-muted-foreground;
+  }
+
+  .landing-actions {
+    @apply mt-6;
+  }
+
+  .landing-section {
+    @apply flex min-h-screen flex-col items-center justify-center gap-4 px-6 text-center;
+  }
+
+  .landing-section.alt {
+    @apply bg-muted;
+  }
+
+  .landing-section-title {
+    @apply text-3xl font-semibold;
+  }
+
+  .landing-section-text {
+    @apply max-w-lg text-muted-foreground;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md bg-primary px-6 py-2 text-sm font-medium text-primary-foreground transition hover:opacity-90;
+  }
+}

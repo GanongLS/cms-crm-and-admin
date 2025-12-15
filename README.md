@@ -159,6 +159,10 @@ npm run build
 
 ### 6. Jalankan Aplikasi
 
+untuk satu command jalankan semua 
+
+`composer run dev`
+
 Jika menggunakan Nginx, cukup akses:
 
 * [http://ganin.test](http://ganin.test)
