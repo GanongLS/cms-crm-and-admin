@@ -1,0 +1,49 @@
+@layer components {
+  .public-root {
+    @apply flex min-h-screen flex-col;
+  }
+
+  /* HEADER */
+  .public-header {
+    @apply fixed top-0 right-0 left-0 z-50
+           flex items-center justify-between
+           px-10 py-6
+           bg-background/80 backdrop-blur;
+  }
+
+  .public-logo {
+    @apply text-lg font-semibold tracking-tight;
+  }
+
+  .public-nav {
+    @apply flex items-center gap-6 text-sm;
+  }
+
+  .public-nav a {
+    @apply text-muted-foreground transition hover:text-foreground;
+  }
+
+  .public-nav-cta {
+    @apply rounded-md bg-primary
+           px-4 py-1.5
+           text-sm font-medium
+           text-primary-foreground;
+  }
+
+  /* CONTENT OFFSET (karena header fixed) */
+  .public-content {
+    @apply pt-24;
+  }
+
+  /* FOOTER */
+  .public-footer {
+    @apply mt-auto
+           flex items-center justify-between
+           border-t border-border
+           px-10 py-8;
+  }
+
+  .public-footer-links {
+    @apply flex gap-6 text-sm text-muted-foreground;
+  }
+}
