@@ -1,4 +1,4 @@
-import { home } from "@/routes";
+import { home } from '@/routes';
 import { Head, Link } from '@inertiajs/react';
 
 export default function Landing() {
@@ -7,8 +7,9 @@ export default function Landing() {
       <Head title="Start Page" />
 
       <main className="landing-root">
-        {/* HERO */}
-        <section className="landing-hero">
+        {/* Layout */}
+        <section className="landing-layout">
+          {/* Landing section dijadikan layout aja. Jadi  */}
           <header className="landing-header">
             <div className="landing-logo">ganin</div>
             <nav className="landing-nav">
@@ -20,7 +21,7 @@ export default function Landing() {
               </Link>
             </nav>
           </header>
-
+          {/* HERO */}
           <div className="landing-hero-content">
             <h1>
               Your personal start page,
@@ -98,7 +99,7 @@ export default function Landing() {
           </p>
         </section>
 
-        {/* FOOTER */}
+        {/* FOOTER Ini dipisah aja jadi layout*/}
         <footer className="landing-footer">
           <div>
             <strong>ganin</strong>
