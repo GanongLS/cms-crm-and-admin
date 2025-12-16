@@ -44,6 +44,23 @@ Route::get('/about', function () {
   return Inertia::render('about');
 })->name('about');
 
+Route::get('/social-impact', function () {
+  return Inertia::render('social-impact');
+})->name('social-impact');
+
+Route::get('/contact', function () {
+  return Inertia::render('contact');
+})->name('contact');
+
+Route::get('/blog', function () {
+  return Inertia::render('blog/index');
+})->name('blog.index');
+
+Route::get('/blog/{slug}', function ($slug) {
+  return Inertia::render('blog/show', [
+    'slug' => $slug,
+  ]);
+})->name('blog.show');
 
 Route::get('/start', function () {
   return Inertia::render('start');

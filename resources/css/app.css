@@ -151,6 +151,9 @@
 @import './pages/science-tech.css';
 @import './pages/art-gallery.css';
 @import './pages/about.css';
+@import './pages/social-impact.css';
+@import './pages/contact.css';
+@import './pages/blog.css';
 
-
+/* public-layout  */
 @import './layouts/public-layout.css';

@@ -1,0 +1,57 @@
+@layer components {
+  .blog-index {
+    @apply mx-auto max-w-4xl px-10 py-24;
+  }
+
+  .blog-header {
+    @apply mb-16 text-center;
+  }
+
+  .blog-header h1 {
+    @apply text-5xl font-semibold tracking-tight;
+  }
+
+  .blog-header p {
+    @apply mt-4 text-muted-foreground;
+  }
+
+  .blog-list {
+    @apply flex flex-col gap-10;
+  }
+
+  .blog-card {
+    @apply border-b border-border pb-8;
+  }
+
+  .blog-card h2 {
+    @apply mt-2 text-2xl font-medium;
+  }
+
+  .blog-card h2 a {
+    @apply hover:underline;
+  }
+
+  .blog-card p {
+    @apply mt-2 text-muted-foreground;
+  }
+
+  .blog-date {
+    @apply text-sm text-muted-foreground;
+  }
+
+  .blog-article {
+    @apply mx-auto max-w-3xl px-10 py-24;
+  }
+
+  .blog-back {
+    @apply text-sm text-muted-foreground hover:underline;
+  }
+
+  .blog-article h1 {
+    @apply mt-6 text-4xl font-semibold tracking-tight;
+  }
+
+  .blog-content {
+    @apply mt-10 space-y-6 text-lg leading-relaxed;
+  }
+}

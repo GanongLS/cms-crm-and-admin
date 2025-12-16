@@ -1,0 +1,62 @@
+@layer components {
+  /* HERO */
+  .contact-hero {
+    @apply flex min-h-[60vh] items-center justify-center px-10 text-center;
+  }
+
+  .contact-hero-content {
+    @apply flex max-w-3xl flex-col gap-4;
+  }
+
+  .contact-hero-content h1 {
+    @apply text-5xl font-semibold tracking-tight;
+  }
+
+  .contact-hero-content p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* SECTIONS */
+  .contact-section {
+    @apply px-10 py-24 text-center;
+  }
+
+  .contact-section.alt {
+    @apply bg-muted;
+  }
+
+  .contact-section h2 {
+    @apply mb-6 text-4xl font-semibold tracking-tight;
+  }
+
+  /* INFO */
+  .contact-info {
+    @apply mx-auto flex max-w-3xl flex-col gap-4;
+  }
+
+  .contact-info p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* METHODS */
+  .contact-method-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .contact-method {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .contact-method h3 {
+    @apply mb-2 text-lg font-medium;
+  }
+
+  .contact-method p {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* NOTE */
+  .contact-note {
+    @apply mx-auto max-w-3xl text-lg text-muted-foreground;
+  }
+}

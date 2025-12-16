@@ -19,7 +19,8 @@ export default function PublicLayout({ children }: PropsWithChildren) {
           <Link href="/science-tech">Science & Technology</Link>
           <Link href="/art-gallery">Art Gallery</Link>
           <Link href="/about">About Us</Link>
-
+          <Link href="/social-impact">Social Impact</Link>
+          <Link href="/blog">Blog Post</Link>
           <div className="nav-divider"></div>
           <>
             <Link href={login()} className="public-nav-link">
@@ -37,13 +38,14 @@ export default function PublicLayout({ children }: PropsWithChildren) {
 
       <footer className="public-footer">
         <div>
-          <strong>ganin</strong>
+          <strong>Ganin</strong>
           <span>© {new Date().getFullYear()}</span>
         </div>
 
         <div className="public-footer-links">
           <Link href={home()}>Welcome</Link>
           <Link href="/solutions">Our Solutions</Link>
+          <Link href="/contact">Contact Us</Link>
           <Link href="/laravel">Laravel</Link>
         </div>
       </footer>

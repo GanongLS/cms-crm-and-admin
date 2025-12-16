@@ -1,0 +1,79 @@
+@layer components {
+  /* HERO */
+  .impact-hero {
+    @apply flex min-h-[60vh] items-center justify-center px-10 text-center;
+  }
+
+  .impact-hero-content {
+    @apply flex max-w-3xl flex-col gap-4;
+  }
+
+  .impact-hero-content h1 {
+    @apply text-5xl font-semibold tracking-tight;
+  }
+
+  .impact-hero-content p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* SECTIONS */
+  .impact-section {
+    @apply px-10 py-24 text-center;
+  }
+
+  .impact-section.alt {
+    @apply bg-muted;
+  }
+
+  .impact-section h2 {
+    @apply mb-6 text-4xl font-semibold tracking-tight;
+  }
+
+  /* OVERVIEW */
+  .impact-overview {
+    @apply mx-auto flex max-w-3xl flex-col gap-4;
+  }
+
+  .impact-overview p {
+    @apply text-lg text-muted-foreground;
+  }
+
+  /* FOCUS AREAS */
+  .impact-focus-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .impact-focus-card {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .impact-focus-card h3 {
+    @apply mb-2 text-lg font-medium;
+  }
+
+  .impact-focus-card p {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* APPROACH */
+  .impact-approach-grid {
+    @apply mx-auto grid max-w-5xl grid-cols-3 gap-8;
+  }
+
+  .impact-approach {
+    @apply rounded-lg border border-border p-6 text-left;
+  }
+
+  .impact-approach h4 {
+    @apply mb-2 text-base font-medium;
+  }
+
+  .impact-approach p {
+    @apply text-sm text-muted-foreground;
+  }
+
+  /* CLOSING */
+  .impact-closing {
+    @apply mx-auto max-w-3xl text-lg text-muted-foreground;
+  }
+}
