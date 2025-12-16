@@ -1,7 +1,6 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import { home, login, register } from '@/routes';
 import { Link } from '@inertiajs/react';
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren, useState } from 'react';
 
 export default function PublicLayout({ children }: PropsWithChildren) {
   const [open, setOpen] = useState(false);
@@ -18,31 +17,7 @@ export default function PublicLayout({ children }: PropsWithChildren) {
     { label: 'Blog', href: '/blog' },
   ];
 
-  const [visibleItems, setVisibleItems] = useState(NAV_ITEMS);
-  const [overflowItems, setOverflowItems] = useState<typeof NAV_ITEMS>([]);
-
-  const ITEM_WIDTH = 132; // perkiraan lebar tiap item nav dalam piksel
-  const FIXED_ITEMS = 3;
-
-  useEffect(() => {
-    function calculateNav() {
-      const maxWidth = window.innerWidth;
-      const availableSlots = Math.floor(maxWidth / ITEM_WIDTH) - FIXED_ITEMS;
-
-      if (availableSlots >= NAV_ITEMS.length) {
-        setVisibleItems(NAV_ITEMS);
-        setOverflowItems([]);
-      } else {
-        setVisibleItems(NAV_ITEMS.slice(0, availableSlots));
-        setOverflowItems(NAV_ITEMS.slice(availableSlots));
-      }
-    }
-
-    calculateNav();
-    window.addEventListener('resize', calculateNav);
-
-    return () => window.removeEventListener('resize', calculateNav);
-  }, []);
+  
 
   return (
     <div className="public-root">
@@ -54,17 +29,11 @@ export default function PublicLayout({ children }: PropsWithChildren) {
         {/* DESKTOP + TABLET NAV */}
         <nav className="public-nav">
           <div className="nav-main">
-            {visibleItems.map((item) => (
+            {NAV_ITEMS.map((item) => (
               <Link key={item.href} href={item.href} className="public-nav-link">
                 {item.label}
               </Link>
             ))}
-
-            {overflowItems.length > 0 && (
-              <button onClick={() => setOpen(!open)} className="public-nav-link">
-                More ▾
-              </button>
-            )}
           </div>
 
           {/* HAMBURGER */}
@@ -84,13 +53,24 @@ export default function PublicLayout({ children }: PropsWithChildren) {
         </nav>
       </header>
 
-      {open && overflowItems.length > 0 && (
+      {/* MOBILE DROPDOWN */}
+      {open && (
         <div className="mobile-nav">
-          {overflowItems.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <Link key={item.href} href={item.href} className="public-nav-link">
               {item.label}
             </Link>
           ))}
+
+          <div className="mobile-divider"></div>
+
+          <Link href={login()} className="public-nav-link">
+            Log in
+          </Link>
+
+          <Link href={register()} className="public-nav-cta">
+            Register
+          </Link>
         </div>
       )}
 

@@ -22,7 +22,7 @@
 
   /* BASE NAV LINK */
   .public-nav-link {
-    @apply inline-block rounded-sm border border-transparent px-2 py-1 text-sm leading-normal text-[#1b1b18] transition hover:border-[#19140035] dark:text-[#EDEDEC] dark:hover:border-[#3E3E3A];
+    @apply inline-block rounded-sm border border-transparent px-5 py-1.5 text-sm leading-normal text-[#1b1b18] transition hover:border-[#19140035] dark:text-[#EDEDEC] dark:hover:border-[#3E3E3A];
   }
 
   /* CTA / PRIMARY NAV BUTTON */
@@ -50,52 +50,5 @@
     margin: 0 2px; /* Adds some space around the line */
   }
 
-  /* NAV GROUPING */
-  .public-nav {
-    @apply flex items-center gap-6;
-  }
-
-  .nav-main {
-    @apply flex items-center gap-6;
-  }
-
-  .nav-auth {
-    @apply flex items-center gap-4;
-  }
-
-  /* HAMBURGER */
-  .nav-hamburger {
-    @apply hidden text-xl;
-  }
-
-  /* TABLET */
-  @media (max-width: 640px) {
-    .nav-main {
-      @apply hidden;
-    }
-
-    .nav-hamburger {
-      @apply inline-block;
-    }
-  }
-
-  /* MOBILE */
-  @media (max-width: 420px) {
-    .nav-auth {
-      @apply hidden;
-    }
-  }
-
-  /* MOBILE DROPDOWN */
-  .mobile-nav {
-    @apply fixed top-[96px] right-0 left-0 z-40 flex flex-col gap-4 bg-background px-10 py-6 shadow-lg;
-  }
-
-  .mobile-nav a {
-    @apply text-muted-foreground hover:text-foreground;
-  }
-
-  .mobile-divider {
-    @apply my-2 border-t border-border;
-  }
+  
 }
