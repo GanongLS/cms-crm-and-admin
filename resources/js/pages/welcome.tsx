@@ -24,6 +24,19 @@ export default function Welcome({ canRegister = true }: { canRegister?: boolean 
             ) : (
               <>
                 <Link
+                  href={learnMore()}
+                  className="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+                >
+                  Go to Landing Page
+                </Link>
+
+                <Link
+                  href={start()}
+                  className="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
+                >
+                  Go to Start Page
+                </Link>
+                <Link
                   href={login()}
                   className="inline-block rounded-sm border border-transparent px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#19140035] dark:text-[#EDEDEC] dark:hover:border-[#3E3E3A]"
                 >
@@ -81,19 +94,6 @@ export default function Welcome({ canRegister = true }: { canRegister?: boolean 
                       </svg>
                     </a>
                   </span>
-                  <Link
-                    href={learnMore()}
-                    className="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-                  >
-                    Go to Landing Page
-                  </Link>
-
-                  <Link
-                    href={start()}
-                    className="inline-block rounded-sm border border-[#19140035] px-5 py-1.5 text-sm leading-normal text-[#1b1b18] hover:border-[#1915014a] dark:border-[#3E3E3A] dark:text-[#EDEDEC] dark:hover:border-[#62605b]"
-                  >
-                    Go to Start Page
-                  </Link>
                 </li>
                 <li className="relative flex items-center gap-4 py-2 before:absolute before:top-0 before:bottom-1/2 before:left-[0.4rem] before:border-l before:border-[#e3e3e0] dark:before:border-[#3E3E3A]">
                   <span className="relative bg-white py-1 dark:bg-[#161615]">

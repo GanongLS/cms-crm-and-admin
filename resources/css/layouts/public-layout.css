@@ -58,9 +58,16 @@
   .nav-main {
     @apply flex items-center gap-6;
   }
+  .nav-mobile {
+    @apply hidden;
+  }
 
   .nav-auth {
     @apply flex items-center gap-4;
+  }
+
+  .mobile-auth {
+    @apply hidden;
   }
 
   /* HAMBURGER */
@@ -74,6 +81,10 @@
       @apply hidden;
     }
 
+    .nav-mobile {
+      @apply flex items-center gap-6;
+    }
+
     .nav-hamburger {
       @apply inline-block;
     }
@@ -84,18 +95,23 @@
     .nav-auth {
       @apply hidden;
     }
+
+    .mobile-auth {
+      @apply flex items-center gap-4;
+    }
   }
 
-  /* MOBILE DROPDOWN */
-  .mobile-nav {
-    @apply fixed top-[96px] right-0 left-0 z-40 flex flex-col gap-4 bg-background px-10 py-6 shadow-lg;
+  /* DESKTOP DROPDOWN untuk bagian overflow*/
+  .nav-dropdown {
+    @apply absolute top-full right-0 z-50 mt-2 flex min-w-[220px] flex-col rounded-md border border-border bg-background py-2 shadow-lg;
   }
 
-  .mobile-nav a {
-    @apply text-muted-foreground hover:text-foreground;
+  .nav-dropdown-item {
+    @apply px-4 py-2 text-sm text-muted-foreground transition hover:bg-muted hover:text-foreground;
   }
 
-  .mobile-divider {
-    @apply my-2 border-t border-border;
+  /* nav dropdown buat register */
+  .nav-dropdown-cta {
+    @apply mx-3 mt-2 rounded-md bg-primary px-4 py-2 text-center text-sm font-medium text-primary-foreground transition hover:opacity-90;
   }
 }

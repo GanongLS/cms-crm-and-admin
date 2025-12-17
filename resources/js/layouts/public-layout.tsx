@@ -1,10 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { home, login, register } from '@/routes';
 import { Link } from '@inertiajs/react';
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren, useEffect, useRef, useState } from 'react';
 
 export default function PublicLayout({ children }: PropsWithChildren) {
-  const [open, setOpen] = useState(false);
+  const [openDesktop, setOpenDesktop] = useState(false);
+  const [openMobile, setOpenMobile] = useState(false);
+
+  const desktopRef = useRef<HTMLDivElement | null>(null);
+  const mobileRef = useRef<HTMLDivElement | null>(null);
 
   const NAV_ITEMS = [
     { label: 'Our Solutions', href: '/solutions' },
@@ -21,9 +25,10 @@ export default function PublicLayout({ children }: PropsWithChildren) {
   const [visibleItems, setVisibleItems] = useState(NAV_ITEMS);
   const [overflowItems, setOverflowItems] = useState<typeof NAV_ITEMS>([]);
 
-  const ITEM_WIDTH = 132; // perkiraan lebar tiap item nav dalam piksel
+  const ITEM_WIDTH = 134; // perkiraan lebar tiap item nav dalam piksel
   const FIXED_ITEMS = 3;
 
+  // Resize useEffect
   useEffect(() => {
     function calculateNav() {
       const maxWidth = window.innerWidth;
@@ -44,6 +49,30 @@ export default function PublicLayout({ children }: PropsWithChildren) {
     return () => window.removeEventListener('resize', calculateNav);
   }, []);
 
+  // Mouse click outside dekstop more useEffect
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (openDesktop && desktopRef.current && !desktopRef.current.contains(e.target as Node)) {
+        setOpenDesktop(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [openDesktop]);
+
+  // Mouse click outside mobile hamburger useEffect
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (openMobile && mobileRef.current && !mobileRef.current.contains(e.target as Node)) {
+        setOpenMobile(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [openMobile]);
+
   return (
     <div className="public-root">
       <header className="public-header">
@@ -61,16 +90,60 @@ export default function PublicLayout({ children }: PropsWithChildren) {
             ))}
 
             {overflowItems.length > 0 && (
-              <button onClick={() => setOpen(!open)} className="public-nav-link">
-                More ▾
-              </button>
+              <div className="relative" ref={desktopRef}>
+                <button onClick={() => setOpenDesktop(!openDesktop)} className="public-nav-link">
+                  More ▾
+                </button>
+
+                {openDesktop && (
+                  <div className="nav-dropdown">
+                    {overflowItems.map((item) => (
+                      <Link
+                        key={item.href}
+                        href={item.href}
+                        className="nav-dropdown-item"
+                        onClick={() => setOpenDesktop(!openDesktop)}
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
             )}
           </div>
+          <div className="nav-mobile">
+            <div className="relative" ref={mobileRef}>
+              <button className="nav-hamburger" onClick={() => setOpenMobile(!openMobile)} aria-label="Toggle menu">
+                ☰
+              </button>
 
-          {/* HAMBURGER */}
-          <button className="nav-hamburger" onClick={() => setOpen(!open)} aria-label="Toggle menu">
-            ☰
-          </button>
+              {openMobile && (
+                <div className="nav-dropdown">
+                  {NAV_ITEMS.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="nav-dropdown-item"
+                      onClick={() => setOpenMobile((v) => !v)}
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+
+                  <div className="mobile-auth my-2 border-t border-border" />
+
+                  <Link href={login()} className="nav-dropdown-item mobile-auth">
+                    Log in
+                  </Link>
+
+                  <Link href={register()} className="nav-dropdown-cta mobile-auth">
+                    Register
+                  </Link>
+                </div>
+              )}
+            </div>
+          </div>
 
           <div className="nav-auth">
             <Link href={login()} className="public-nav-link">
@@ -83,16 +156,6 @@ export default function PublicLayout({ children }: PropsWithChildren) {
           </div>
         </nav>
       </header>
-
-      {open && overflowItems.length > 0 && (
-        <div className="mobile-nav">
-          {overflowItems.map((item) => (
-            <Link key={item.href} href={item.href} className="public-nav-link">
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      )}
 
       <main className="public-content">{children}</main>
 
